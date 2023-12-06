@@ -29,7 +29,7 @@ function DropdownMenu() {
               data-bs-display="static"
               aria-expanded="false"
             >
-              Menu
+            MENU
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
               {navLinks.map((d, i) => (

@@ -22,7 +22,16 @@ const Shipping = () => {
 
             <select>
               <option value="">Country</option>
-// Enter the code here for country dropdown           
+              {}
+            </select>
+          </div>
+          <div>
+            <label>State</label>
+            <select>
+              <option value="">State</option>
+              {State && State.getStatesOfCountry("SE").map((i) => (
+              <option option value={i.isoCode} key={i.isoCode}>
+              {i.name}    
                   </option>
                 ))}
             </select>
@@ -35,7 +44,11 @@ const Shipping = () => {
             <label>Pin Code</label>
             <input type="number" placeholder="Enter Pincode" />
           </div>
-        // Enter thr code for contact           
+          <div className="d-flex align-items-center justify-content-center" style={{ paddingTop: '20px' }}>
+          <a href="/myorders" className="btn btn-danger">
+            Checkout
+          </a>
+          </div>      
           
           <Popup trigger=
                 {<button type = "button">Confirm Order</button>}
@@ -48,5 +61,4 @@ const Shipping = () => {
     </section>
   );
 };
-
 export default Shipping;

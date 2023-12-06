@@ -1,6 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
-import me from "../../assets/skj.jpg";
+import {motion} from "framer-motion";
+import me from "../../assets/MKO.jpg";
 const Founder = () => {
   const options = {
     initial: {
@@ -12,15 +12,15 @@ const Founder = () => {
       opacity: 1,
     },
   };
-
   return (
     <section className="founder">
       <motion.div {...options}>
-        <img src={me} alt="Founder" height={200} width={200} />
-        <h3>Nelson</h3>
-
+        <img src={me} alt="Founder" height={250} width={250} />
+        <h3>
+          Hello!
+        </h3>
         <p>
-          Hey, Everyone I am Nelson, the founder of Burger Shop.
+          My name is MKO and I am the founder of Burger Shop.
           <br />
           Our aim is to create the most tasty burger on planet.
         </p>
@@ -28,5 +28,4 @@ const Founder = () => {
     </section>
   );
 };
-
 export default Founder;
