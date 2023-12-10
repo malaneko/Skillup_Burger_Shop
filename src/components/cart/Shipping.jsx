@@ -1,6 +1,7 @@
 import React from "react";
 import { Country, State } from "country-state-city";
 import Popup from 'reactjs-popup';
+import { Link } from "react-router-dom";
 
 const Shipping = () => {
   return (
@@ -9,8 +10,8 @@ const Shipping = () => {
         <h1>Shipping Details</h1>
         <form>
           <div>
-            <label>H.No.</label>
-            <input type="text" placeholder="Enter House No." />
+            <label>Address</label>
+            <input type="text" placeholder="House Number" />
           </div>
           <div>
             <label>City</label>
@@ -21,15 +22,15 @@ const Shipping = () => {
             <label>Country</label>
 
             <select>
-              <option value="">Country</option>
+              <option value="">United Kingdom</option>
               {}
             </select>
           </div>
           <div>
-            <label>State</label>
+            <label>Country</label>
             <select>
-              <option value="">State</option>
-              {State && State.getStatesOfCountry("SE").map((i) => (
+              <option value="">Scotland</option>
+              {State && State.getStatesOfCountry("UK").map((i) => (
               <option option value={i.isoCode} key={i.isoCode}>
               {i.name}    
                   </option>
@@ -39,6 +40,10 @@ const Shipping = () => {
           <div>
               {/* Add the code for the STATE DROPDOWN*/}
            
+          </div>
+          <div>
+            <label>Phone Number</label>
+            <input type="number" placeholder="Enter Phone Number." />
           </div>
           <div>
             <label>Pin Code</label>

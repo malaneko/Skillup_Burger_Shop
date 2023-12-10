@@ -30,7 +30,7 @@ const Cart = () => {
         <CartItem
           title={"Double Cheese"}
           img={burger1}
-          value={10}
+          value={0}
           increment={() => increment(1)}
           decrement={() => decrement(1)}
 
@@ -40,7 +40,7 @@ const Cart = () => {
         <CartItem
           title={"Classic Cheese"}
           img={burger2}
-          value={10}
+          value={0}
           increment={() => increment(2)}
           decrement={() => decrement(2)}
         // Add the function for decrementing the order by 2
@@ -52,7 +52,7 @@ const Cart = () => {
         <CartItem
           title={"Cheeseburger with French Fries"}
           img={burger3}
-          value={10}
+          value={1}
           increment={(value) => increment(3)}
           decrement={() => decrement(3)}
         />
@@ -61,7 +61,7 @@ const Cart = () => {
         <article>
           <div>
             <h4>Sub Total</h4>
-            <p>£{14.50}</p>
+            <p>£{22.50}</p>
           </div>
           <div>
             <h4>Shipping Charges</h4>
@@ -69,7 +69,7 @@ const Cart = () => {
           </div>{" "}
           <div>
             <h4>Total</h4>
-            <p>£{14.50 + + 2.0}</p>
+            <p>£{22.50 +  + 2.0}</p>
           </div>
           <Link to="/shipping">Checkout</Link>
         </article>
@@ -79,3 +79,4 @@ const Cart = () => {
 };
 
 export default Cart;
+
